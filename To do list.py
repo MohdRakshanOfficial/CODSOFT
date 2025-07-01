@@ -30,7 +30,7 @@ class TodoApp:
         self.entry.pack(pady=10, padx=10, fill=tk.X)
 
         # Add Task Button
-        self.add_button = tk.Button(root, text="Add Task", command=self.add_task)
+        self.add_button = tk.Button(root, text="Add Task", command=self.add_task,bg='yellow')
         self.add_button.pack(pady=5)
 
         # Listbox to show tasks
@@ -38,10 +38,10 @@ class TodoApp:
         self.task_listbox.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
 
         # Buttons
-        self.done_button = tk.Button(root, text="Mark as Done", command=self.mark_done)
+        self.done_button = tk.Button(root, text="Mark as Done", command=self.mark_done,bg='lightgreen')
         self.done_button.pack(pady=5)
 
-        self.delete_button = tk.Button(root, text="Delete Task", command=self.delete_task)
+        self.delete_button = tk.Button(root, text="Delete Task", command=self.delete_task,bg='red')
         self.delete_button.pack(pady=5)
 
         self.load_into_listbox()
